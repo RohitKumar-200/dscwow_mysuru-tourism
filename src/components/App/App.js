@@ -7,6 +7,8 @@ import Jumbo from "../Jumbo/Jumbo";
 import Footer from "../Footer/Footer";
 import "./App.css";
 
+import Add from "../Add/Add";
+
 function App() {
   return (
     <div className="app">
@@ -17,6 +19,9 @@ function App() {
           </Route>
           <Route path="/upload">
             <ImageUpload />
+          </Route>
+          <Route path="/add">
+            <Add />
           </Route>
           <Route path="/">
             <Header />

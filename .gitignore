@@ -28,4 +28,4 @@ firebase.json
 .firebase
 
 /src/data
-.eslinkcache
+.eslintcache

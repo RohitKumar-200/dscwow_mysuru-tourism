@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./ImageUpload.css";
 import { storage, db } from "../../firebase";
+import firebase from "firebase";
 
 function ImageUpload() {
   const user = JSON.parse(localStorage.getItem("mysuru-tourism-user"));
   const [destination, setDestination] = useState("");
   const [image, setImage] = useState(null);
-  const [url, setUrl] = useState("");
   const [progress, setProgress] = useState(0);
 
   const handleFileChange = (e) => {
@@ -27,7 +27,22 @@ function ImageUpload() {
         console.log(error);
       },
       () => {
-        storage.ref("images").child(image.name).getDownloadURL();
+        storage
+          .ref("images")
+          .child(image.name)
+          .getDownloadURL()
+          .then((url) => {
+            db.collection("images").add({
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+              destinationCamelName: destination,
+              imgUrl: url,
+              userEmail: user.email,
+              userName: user.name,
+            });
+            setProgress(0);
+            setDestination("");
+            setImage(null);
+          });
       }
     );
   };
@@ -35,6 +50,7 @@ function ImageUpload() {
   return (
     <div className="imageUpload">
       <div className="imageUpload__container">
+        <progress value={progress} max="100" />
         <input
           type="text"
           placeholder="Enter destination name"
