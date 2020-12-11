@@ -1,16 +1,20 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-//import NavDropdown from 'react-bootstrap/NavDropdown';
 import FormControl from 'react-bootstrap/FormControl';
 import "./Header.css";
 function Header() {
-    return (
-      <div>
-        <Navbar expand="lg" variant="light" bg="light" sticky = "top">
+  return (
+    <div>
+      <Navbar expand="lg" variant="light" bg="light" sticky = "top">
         <Navbar.Brand href="#home">
       <img alt="" src="/images/favicon.ico" width = "75" height = "75" className="d-inline-block align-top"/>{' '}
     </Navbar.Brand>
@@ -39,8 +43,8 @@ function Header() {
         </Navbar.Collapse>
         
         </Navbar>
-      </div>
-    );
+    </div>
+  );
 }
 
 export default Header;
