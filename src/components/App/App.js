@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "../Login/Login";
 import Header from "../Header/Header";
+import ImageUpload from "../ImageUpload/ImageUpload";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Switch>
           <Route path="/Login">
             <Login />
+          </Route>
+          <Route path="/upload">
+            <ImageUpload />
           </Route>
           <Route path="/">
             <Header />
