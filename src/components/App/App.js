@@ -6,7 +6,8 @@ import Jumbo from "../Jumbo/Jumbo";
 import Travel from "../Travel/Travel";
 import Footer from "../Footer/Footer";
 import "./App.css";
-
+import ImageUpload from "../ImageUpload/ImageUpload";
+import Destinations from "../Destinations/Destinations";
 import Add from "../Add/Add";
 
 function App() {
@@ -16,6 +17,18 @@ function App() {
         <Switch>
           <Route path="/Login">
             <Login />
+          </Route>
+          <Route path="/home">
+            <Header />
+            <Carosel />
+            <Jumbo />
+            <Travel />
+            <Footer />
+          </Route>
+          <Route path="/destinations">
+            <Header />
+            <Destinations />
+            <Footer />
           </Route>
           <Route path="/upload">
             <ImageUpload />

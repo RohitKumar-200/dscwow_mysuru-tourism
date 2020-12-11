@@ -9,6 +9,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import "./Header.css";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
@@ -27,11 +28,18 @@ function Header() {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#travel-info">Travel Info</Nav.Link>
-            <Nav.Link href="#About-mysuru">About Mysuru</Nav.Link>
-            <Nav.Link href="#Destination">Destinations</Nav.Link>
-            <Nav.Link href="#Experiences">Experiences</Nav.Link>
+            <Nav.Link>
+              <Link to="/home">Home</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/destinations">Destinations</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/experiences">Experiences</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/gallery">Gallery</Link>
+            </Nav.Link>
           </Nav>
 
           <Navbar.Brand href="#home">

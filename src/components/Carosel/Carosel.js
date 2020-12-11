@@ -4,7 +4,7 @@ import "./Carosel.css";
 function Carosel() {
   return (
     <Carousel>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100"
           src="/images/Mysore-cr-1.jpg"
@@ -16,7 +16,7 @@ function Carosel() {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100"
           src="/images/Mysore-cr-2.jpg"
@@ -28,7 +28,7 @@ function Carosel() {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100"
           src="/images/Mysore-cr-3.jpg"
