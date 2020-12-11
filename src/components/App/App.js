@@ -1,8 +1,11 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "../Login/Login";
 import Header from "../Header/Header";
 import ImageUpload from "../ImageUpload/ImageUpload";
+import Carosel from "../Carosel/Carosel";
+import Jumbo from "../Jumbo/Jumbo";
+import Footer from "../Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           </Route>
           <Route path="/">
             <Header />
+            <Carosel />
+            <Jumbo />
+            <Footer />
           </Route>
         </Switch>
       </Router>
