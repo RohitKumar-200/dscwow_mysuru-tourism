@@ -1,10 +1,14 @@
-.carousel{
-    padding: 10px;
-    background-color: slategray;
+.carousel {
+  background-color: slategray;
+  width: 100%;
 }
-.carousel img{
-    height: calc(97vh - 101px);
+.carousel-caption {
+  background-color: black;
+  opacity: 0.7;
 }
-.carousel .carousel-item{
-    width: 100%;
+.carousel img {
+  height: calc(100vh - 101px);
+}
+.carousel .carousel-item {
+  width: 100%;
 }
