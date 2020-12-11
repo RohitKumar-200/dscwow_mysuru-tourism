@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "../Login/Login";
 import Header from "../Header/Header";
-import ImageUpload from "../ImageUpload/ImageUpload";
 import Carosel from "../Carosel/Carosel";
 import Jumbo from "../Jumbo/Jumbo";
+import Travel from "../Travel/Travel";
 import Footer from "../Footer/Footer";
 import "./App.css";
 
@@ -27,6 +27,7 @@ function App() {
             <Header />
             <Carosel />
             <Jumbo />
+            <Travel />
             <Footer />
           </Route>
         </Switch>
