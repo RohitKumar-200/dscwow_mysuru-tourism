@@ -1,0 +1,33 @@
+.post__container {
+  margin: 20px auto;
+  width: 700px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 5px 5px 30px -22px #000;
+}
+.post__header {
+  height: 50px;
+  background-color: rgb(255, 225, 231);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.post__author {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.post__imageContainer {
+  height: 300px;
+}
+.post__imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post__destination {
+  font-size: 25px;
+}
+.post__content {
+  min-height: 50px;
+  padding: 10px;
+  background-color: rgb(255, 222, 208);
+}

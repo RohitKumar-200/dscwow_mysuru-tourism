@@ -6,7 +6,8 @@ import Jumbo from "../Jumbo/Jumbo";
 import Travel from "../Travel/Travel";
 import Footer from "../Footer/Footer";
 import "./App.css";
-import ImageUpload from "../ImageUpload/ImageUpload";
+import Experiences from "../Experiences/Experiences";
+import Gallery from "../Gallery/Gallery";
 import Destinations from "../Destinations/Destinations";
 import Add from "../Add/Add";
 
@@ -30,8 +31,15 @@ function App() {
             <Destinations />
             <Footer />
           </Route>
-          <Route path="/upload">
-            <ImageUpload />
+          <Route path="/experiences">
+            <Header />
+            <Experiences />
+            <Footer />
+          </Route>
+          <Route path="/gallery">
+            <Header />
+            <Gallery />
+            <Footer />
           </Route>
           <Route path="/add">
             <Add />

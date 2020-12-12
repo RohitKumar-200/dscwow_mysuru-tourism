@@ -6,6 +6,7 @@ import firebase from "firebase";
 function ImageUpload() {
   const user = JSON.parse(localStorage.getItem("mysuru-tourism-user"));
   const [destination, setDestination] = useState("");
+  const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
 
@@ -50,14 +51,19 @@ function ImageUpload() {
   return (
     <div className="imageUpload">
       <div className="imageUpload__container">
-        <progress value={progress} max="100" />
         <input
           type="text"
           placeholder="Enter destination name"
           onChange={(event) => setDestination(event.target.value)}
         />
+        <input
+          type="text"
+          placeholder="Enter your experience in this place"
+          onChange={(event) => setContent(event.target.value)}
+        />
         <input type="file" onChange={handleFileChange} />
-        <button onClick={handleImageUpload}>Upload</button>
+        <progress value={progress} max="100" />
+        <button onClick={handleImageUpload}>post</button>
       </div>
     </div>
   );

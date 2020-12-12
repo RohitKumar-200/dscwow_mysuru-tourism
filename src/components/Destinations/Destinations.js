@@ -11,8 +11,6 @@ function Destinations() {
     });
   }, []);
 
-  console.log(destinations);
-
   return (
     <div className="destinations">
       {destinations?.map((destination) => (

@@ -1,0 +1,33 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.gallery__imageContainer {
+  margin-top: 10px;
+  width: 24vw;
+}
+.gallery__box {
+  position: relative;
+}
+.gallery__imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+.gallery__imageInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.gallery__imageInfo h2 {
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
