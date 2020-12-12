@@ -26,8 +26,8 @@ function Header() {
       <Navbar expand="lg" variant="light" bg="light" sticky="top">
         <Navbar.Brand>
           <img
-            alt=""
-            src="/mysuruLogo.png"
+            alt="Mysuru logo"
+            src={"/MysuruLogo.png"}
             width="75"
             className="d-inline-block align-top"
           />{" "}
