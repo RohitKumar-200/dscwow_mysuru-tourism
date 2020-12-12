@@ -26,7 +26,7 @@ function Login() {
   return (
     <div className="login">
       <div className="login__container">
-        <img src={"/mysuruLogo.jpg"} alt="mysuru logo" />
+        <img src={"/MysuruLogo.png"} alt="mysuru logo" />
         <div className="login__text">
           <h1>Sign in to Mysuru tourism</h1>
         </div>
