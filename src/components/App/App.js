@@ -9,6 +9,7 @@ import "./App.css";
 import Experiences from "../Experiences/Experiences";
 import Gallery from "../Gallery/Gallery";
 import Destinations from "../Destinations/Destinations";
+import Map from "../Map/Map";
 import Add from "../Add/Add";
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
           <Route path="/gallery">
             <Header />
             <Gallery />
+            <Footer />
+          </Route>
+          <Route path="/map">
+            <Header />
+            <Map />
             <Footer />
           </Route>
           <Route path="/add">

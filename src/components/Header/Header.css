@@ -1,6 +1,19 @@
 .navbar-light .navbar-brand {
-    color: #31ccfd;
+  color: #31ccfd;
 }
-.navbar-light .navbar-nav .nav-link{
-    font-weight: bold;
+.navbar-light .navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+.header__userName {
+  margin-right: 10px;
+}
+.header__authButton {
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  background-color: #76dfff;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
 }

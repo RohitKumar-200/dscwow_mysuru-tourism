@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,22 +8,34 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
+import { Avatar } from "@material-ui/core";
 import "./Header.css";
 import { Link } from "react-router-dom";
 function Header() {
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("mysuru-tourism-user"))
+  );
+
+  const handleLogout = () => {
+    localStorage.removeItem("mysuru-tourism-user");
+    setUser(null);
+  };
+
   return (
-    <div>
+    <div className="header">
       <Navbar expand="lg" variant="light" bg="light" sticky="top">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           <img
             alt=""
-            src="/images/favicon.ico"
+            src="/mysuruLogo.png"
             width="75"
-            height="75"
             className="d-inline-block align-top"
           />{" "}
         </Navbar.Brand>
-        <Navbar.Brand href="#home"> Mysuru Tourism </Navbar.Brand>
+        <Navbar.Brand>
+          {" "}
+          <Link to="/home">Mysuru Tourism</Link>{" "}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
@@ -40,23 +52,25 @@ function Header() {
             <Nav.Link>
               <Link to="/gallery">Gallery</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/map">Map</Link>
+            </Nav.Link>
           </Nav>
-
-          <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src="/images/circle.png"
-              width="25"
-              height="25"
-              roundedCircle
-              className="d-inline-block align-top"
-            />{" "}
+          <div className="header__userName">
+            {user ? user.name : "Hello Guest"}
+          </div>
+          <Navbar.Brand>
+            <Avatar src={user?.pic} />
           </Navbar.Brand>
-
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          {user ? (
+            <button className="header__authButton" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="header__authButton">SignIn</button>
+            </Link>
+          )}
         </Navbar.Collapse>
       </Navbar>
     </div>
